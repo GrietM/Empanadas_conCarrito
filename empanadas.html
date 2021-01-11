@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Posada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/pagina web">Inicio</a></li>
+                <li><a href="empanadas.html">Empanadas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img class="logo" src="images/logo_sin_fondo.png" alt="La Posada"></aside> 
+        <article class="empanadas_article">
+         <section class="columns-desktop">
+             <div class= "carnepicante">
+                 <img src="images/carnepicante.jpeg" alt="carnepicante"> 
+                <div class= "columns" >
+                    <div class= "title">
+                    Carne Picante
+                    </div>
+                    <div class= "price">
+                        45$
+                    </div>
+                </div>
+                 <p> La mas pedida! </p> 
+                 <input class= "cantidad" type="number" min="0">
+                 <button data-order = "carnepicante">
+                     Agregar
+                 </button>
+             </div>
+             <div class= "carnesuave">
+                <img src="images/carnesuave.jpeg" alt="carnesuave">
+               <div class= "columns" >
+                   <div class= "title">
+                   Carne Suave
+                   </div>
+                   <div class= "price">
+                       45$
+                   </div>
+               </div>
+                <p> Un clásico! </p> 
+                <input class= "cantidad" type="number" min="0">
+                <button data-order = "carnesuave">
+                    Agregar
+                </button>
+            </div>
+            <div class= "sfijas">
+                <img src="images/sfijas.jpeg" alt="sfijas">
+               <div class= "columns" >
+                   <div class= "title">
+                   Sfijas
+                   </div>
+                   <div class= "price">
+                       40$
+                   </div>
+               </div>
+                <p> Súper recomendadas! </p> 
+                <input class= "cantidad" type="number" min="0">
+                <button data-order = "sfijas">
+                    Agregar
+                </button>
+            </div>
+        </section>
+        <section class="columns-desktop2">
+            <div class= "quesoyceb">
+                <img src="images/quesoyceb.jpeg" alt="quesoyceb">
+               <div class= "columns" >
+                   <div class= "title">
+                   Queso+Cebolla
+                   </div>
+                   <div class= "price">
+                       35$
+                   </div>
+               </div>
+                <p> Probalas! </p>
+                <input class= "cantidad" type="number" min="0"> 
+                <button data-order = "quesoyceb">
+                    Agregar
+                </button>
+            </div>
+             </div>
+            <div class= "ternera">
+                <img src="images/ternera.jpeg" alt="ternera">
+               <div class= "columns" >
+                   <div class= "title">
+                   Ternera+Queso
+                   </div>
+                   <div class= "price">
+                       45$
+                   </div>
+               </div>
+                <p> Nuestra preferida! </p>
+                <input class= "cantidad" type="number" min="0">
+                <button data-order = "ternera">
+                    Agregar
+                </button>
+            </div>
+            <div class= "verdura">
+                <img src="images/verdura.jpeg" alt="verdura">
+               <div class= "columns" >
+                   <div class= "title">
+                   Verdura
+                   </div>
+                   <div class= "price">
+                       30$
+                   </div>
+               </div>
+                <p> Opción veggie! </p> 
+                <input class= "cantidad" type="number" min="0">
+                <button data-order = "verdura">
+                    Agregar
+                </button>
+            </div>
+         </section>
+        
+        </article>
+                <div class= "carrito">
+                <div class="titulo"> Carrito de compras
+                    <button pay-order = "comprar"  id="boton_comprar">Comprar</button>
+                </div>
+                <div class= "tipodeempanada"> 
+                    <div>
+                        Carne Picante
+                    </div>
+                    <div class="cantidad">
+                        <div>
+                            Cantidad
+                        </div>
+                        <div class="valorCarnePic">
+                            <label for="valor" id="carnepicante"> - </label>
+                        </div>
+                    </div>
+                    <div class= "total">
+                        <div>
+                            Total $
+                        </div>
+                        <div>
+                            <label for="valor" id="carnepicantePrecio"> - </label>
+                        </div>
+                    </div>
+                </div>
+                <div class= "tipodeempanada"> <!--Este es el 2-->
+                    <div>
+                        Carne Suave
+                    </div>
+                    <div class="cantidad">
+                        <div>
+                            Cantidad
+                        </div>
+                        <div>
+                            <label for="valor" id="carnesuave"> - </label>
+                        </div>
+                    </div>
+                    <div class= "total">
+                        <div>
+                            Total $
+                        </div>
+                        <div>
+                            <label for="valor" id="carnesuavePrecio"> - </label>
+                        </div>
+                    </div>
+                </div>
+                <div class= "tipodeempanada"> <!--Este es el 3-->
+                    <div>
+                        Sfijas
+                    </div>
+                    <div class="cantidad">
+                        <div>
+                            Cantidad
+                        </div>
+                        <div>
+                            <label for="valor" id="sfijas"> - </label>
+                        </div>
+                    </div>
+                    <div class= "total">
+                        <div>
+                            Total $
+                        </div>
+                        <div>
+                            <label for="valor" id="sfijasPrecio"> - </label>
+                        </div>
+                    </div>
+                </div>
+                <div class= "tipodeempanada"> <!--Este es el 4-->
+                    <div>
+                       Queso y Cebolla
+                    </div>
+                    <div class="cantidad">
+                        <div>
+                            Cantidad
+                        </div>
+                        <div>
+                            <label for="valor" id="quesoyceb"> - </label>
+                        </div>
+                    </div>
+                    <div class= "total">
+                        <div>
+                            Total $
+                        </div>
+                        <div>
+                            <label for="valor" id="quesoycebPrecio"> - </label>
+                        </div>
+                    </div>
+                </div>
+                <div class= "tipodeempanada"> <!--Este es el 5-->
+                    <div>
+                        Ternera
+                    </div>
+                    <div class="cantidad">
+                        <div>
+                            Cantidad
+                        </div>
+                        <div>
+                            <label for="valor" id="ternera"> - </label>
+                        </div>
+                    </div>
+                    <div class= "total">
+                        <div>
+                            Total $
+                        </div>
+                        <div>
+                            <label for="valor" id="terneraPrecio"> - </label>
+                        </div>
+                    </div>
+                </div>
+                <div class= "tipodeempanada"> <!--Este es el 6-->
+                    <div>
+                        Verdura
+                    </div>
+                    <div class="cantidad">
+                        <div>
+                            Cantidad
+                        </div>
+                        <div>
+                            <label for="valor" id="verdura"> - </label>
+                        </div>
+                    </div>
+                    <div class= "total">
+                        <div>
+                            Total $
+                        </div>
+                        <div>
+                            <label for="valor" id="verduraPrecio"> - </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="totalFinal">Total $
+                     <label for="totalFinal" id="totalFinal">-</label>
+                </div>
+            </div>
+    
+      </main>
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="/pagina web">Inicio</a></li>
+            <li><a href="empanadas.html">Empanadas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </footer>
+</body>
+<script >
+    window.addEventListener("DOMContentLoaded",() => {
+    const orderButtons = document.querySelectorAll('button[data-order]')
+    /*const payButton = document.querySelectorAll('button[pay-order]')*/
+    const payButton = document.getElementById("boton_comprar")
+    
+    console.log(orderButtons)
+    console.log(payButton)
+   
+    orderButtons.forEach((item)=> {
+        item.addEventListener("click",(event) => {
+        const button = event.currentTarget
+        const container = button.parentNode
+        
+        const order = {
+            id: button.getAttribute("data-order"),
+            title: container.querySelector(".title").innerText,
+            price: container.querySelector(".price").innerText,
+            cantidad: container.querySelector(".cantidad").value
+        }
+
+        let labelCantidad= document.getElementById(order.id)
+        let labelPrice = document.getElementById(`${order.id}Precio`) 
+        let string = JSON.stringify(order.price)
+     
+        string = string.slice(1,3)
+        let precioNumerico = parseInt(string)
+        
+        labelCantidad.innerText=order.cantidad
+        labelPrice.innerText=precioNumerico*order.cantidad
+
+        //Calculo de precios finales//
+
+        let precioCP= document.getElementById(carnepicantePrecio)
+        precioCP=precioCP.innerText
+        console.log(precioCP)
+
+        let precioTotal=precioCP
+        console.log(precioTotal)
+        console.log(precioCP)
+
+        totalFinal.innerText=precioTotal 
+
+       
+    })
+    })
+})
+
+function clickCompra (event){
+    payButton.addEventListener("click",(event)=>{
+        console.log("entre!")
+        const url = window.location.href.replace("empanadas.html", "order.html")
+        window.location.href = url
+    })
+}
+
+</script>
+</html>
