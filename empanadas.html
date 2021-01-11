@@ -257,8 +257,8 @@
                 </div>
             </div>
     
-      </main>
-      <footer>
+    </main>
+    <footer>
         <nav>
           <ul>
             <li><a href="/pagina web">Inicio</a></li>
@@ -266,16 +266,15 @@
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </nav>
-      </footer>
+    </footer>
 </body>
 <script >
     window.addEventListener("DOMContentLoaded",() => {
     const orderButtons = document.querySelectorAll('button[data-order]')
-    /*const payButton = document.querySelectorAll('button[pay-order]')*/
-    const payButton = document.getElementById("boton_comprar")
+    const payButton = document.getElementById("boton_comprar") /* guardo el boton comprar segun su id */
     
     console.log(orderButtons)
-    console.log(payButton)
+    console.log(payButton) /* si esta levantando el elemento "boton comprar" */
    
     orderButtons.forEach((item)=> {
         item.addEventListener("click",(event) => {
@@ -286,21 +285,22 @@
             id: button.getAttribute("data-order"),
             title: container.querySelector(".title").innerText,
             price: container.querySelector(".price").innerText,
-            cantidad: container.querySelector(".cantidad").value
+            cantidad: container.querySelector(".cantidad").value /* levanto el valor que se ingresa en el input con el botón Agregar*/ 
         }
 
         let labelCantidad= document.getElementById(order.id)
         let labelPrice = document.getElementById(`${order.id}Precio`) 
         let string = JSON.stringify(order.price)
      
-        string = string.slice(1,3)
-        let precioNumerico = parseInt(string)
+        string = string.slice(1,3) /* le saco el signo $ al precio */
+        let precioNumerico = parseInt(string) /* paso el precio a entero para poder usarlo en operaciones matematicas para preciototal */
         
         labelCantidad.innerText=order.cantidad
         labelPrice.innerText=precioNumerico*order.cantidad
 
         //Calculo de precios finales//
 
+        
         let precioCP= document.getElementById(carnepicantePrecio)
         precioCP=precioCP.innerText
         console.log(precioCP)
@@ -310,12 +310,14 @@
         console.log(precioCP)
 
         totalFinal.innerText=precioTotal 
-
+        
+        /*ESTE BLOQUE PARA CALCULAR EL PRECIO FINAL NO ESTA FUNCIONANDO....*/
        
     })
     })
 })
 
+/* Armo una función para que al hacer click en el botón comprar me redirija a la pagna order */clickCompra
 function clickCompra (event){
     payButton.addEventListener("click",(event)=>{
         console.log("entre!")
@@ -323,6 +325,6 @@ function clickCompra (event){
         window.location.href = url
     })
 }
-
+/* esta funcion  para redirigir a order.html no esta funcionando */ 
 </script>
 </html>
