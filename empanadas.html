@@ -318,13 +318,18 @@
     })
 })
 
-/* Armo una función para que al hacer click en el botón comprar me redirija a la pagna order */clickCompra
+/* Armo una función para que al hacer click en el botón comprar me redirija a la pagna order */
+
 function clickCompra (event){
         
         const url = window.location.href.replace("empanadas.html", "order.html")
         window.location.href = url;
 }
 
-/* esta funcion  para redirigir a order.html no esta funcionando */ 
+/* El recuadro de la foto y el parrafo que se ven en la pagina order.html son los que estaban guardados en la variable order. 
+Venían de mirar los bones data-order, escuchar los clicks y guardar el id, title y price en una variable "order" temporal en local storage.
+Faltaría actualizar eso para crear una variable que guarde el valor total (que no esta funcionando) y ponerle de foto una foto 
+genérica que represente la orden final.*/
+
 </script>
 </html>
