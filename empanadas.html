@@ -272,7 +272,8 @@
     window.addEventListener("DOMContentLoaded",() => {
     const orderButtons = document.querySelectorAll('button[data-order]')
     const payButton = document.getElementById("boton_comprar") /* guardo el boton comprar segun su id */
-    
+    payButton.onclick = clickCompra;
+
     console.log(orderButtons)
     console.log(payButton) /* si esta levantando el elemento "boton comprar" */
    
@@ -319,12 +320,11 @@
 
 /* Armo una función para que al hacer click en el botón comprar me redirija a la pagna order */clickCompra
 function clickCompra (event){
-    payButton.addEventListener("click",(event)=>{
-        console.log("entre!")
+        
         const url = window.location.href.replace("empanadas.html", "order.html")
-        window.location.href = url
-    })
+        window.location.href = url;
 }
+
 /* esta funcion  para redirigir a order.html no esta funcionando */ 
 </script>
 </html>
